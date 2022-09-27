@@ -46,7 +46,28 @@
 			font-family: Georgia;
 			font-size: medium;
 		}
+
+		#more {
+			display: none;
+		}
 	</style>
+	<script>
+		function readmore() {
+			var dots = document.getElementById("dots");
+			var moreText = document.getElementById("more");
+			var btnText = document.getElementById("myBtn");
+
+			if (dots.style.display === "none") {
+				dots.style.display = "inline";
+				btnText.innerHTML = "Read more";
+				moreText.style.display = "none";
+			} else {
+				dots.style.display = "none";
+				btnText.innerHTML = "Read less";
+				moreText.style.display = "inline";
+			}
+		}
+	</script>
 </head>
 
 <body>
@@ -109,12 +130,8 @@
 													and <b>BTech</b> from <a href="https://allenhouse.ac.in/"
 														target="_blank"><strong> Allenhouse Group of
 															Colleges</strong></a> in Computer Science.</p>
-												<!-- <p>Currently adding new technologies and tool into my armoury and
-													exploring untouched areas of technology, love to do web development
-													and Machine Learning and also love some beautiful subjects,
-													Technologies like <b>Algorithm & Data Structure, Blockchain</b> and
-													<b> Machine Learning</b>. -->
-												</p>
+												<!-- <p>His area of interest is Cryptocurrency, Blockchain and Software development
+												</p> -->
 											</div>
 
 										</div>
@@ -143,9 +160,13 @@
 												attacks), temporal aspects are not directly applicable in the Bitcoin
 												blockchain. Several pre-processing steps should be performed before such
 												temporal aspects are utilized. We are motivated to study the Bitcoin
-												transaction network and use the temporal features such as burst,
-												attractiveness, and inter-event time along with several graph-based
-												properties such as the degree of node and clustering coefficient to
+												transaction network and use the temporal features
+											<span id="dots" style="font-family:Georgia;font-size:medium;" align="justify">
+											...
+											</span>
+											<span id="more" style="font-family:Georgia;font-size:medium;" align="justify">
+												such as burst, attractiveness, and inter-event time along with several
+												graph-based properties such as the degree of node and clustering coefficient to
 												validate the applicability of already existing approaches known for
 												other cryptocurrency blockchains on the Bitcoin blockchain. We generate
 												the temporal and non-temporal feature set and train the Machine Learning
@@ -159,20 +180,16 @@
 												and inter-event time. Further, we identify 3 suspects that showed
 												malicious behavior across different temporal granularities. These
 												suspects are not marked as malicious in Bitcoin.
-												<!-- Permissionless Blockchains are ever increasing temporal graphs that
-												mainly involve transactions of <b>crypto-currency</b>. Our aim is to
-												device a <b>Machine Learning</b> algorithm that detects <b>malicious
-													accounts</b> within such permissionless blockchains and study
-												the
-												effect and applicability of features used across varied types of
-												<b>Blockchains</b> such as <b>Bitcoin</b> and <b>Ethereum</b>. -->
-												</br>
+											</span>
+											<a href="javascript:void(0)" onclick="readmore()" id="myBtn">Read more</a>
+											</p>
+											</br>
+											<p style="font-family:Georgia;font-size:medium;" align="justify">
 												This work was done under the guidance of <strong><a
 														href="http://www.google.com/search?q=+Sandeep+Shukla"
 														target="_blank"> Prof. Sandeep Shukla</a></strong> and
-												<strong><a href="https://rachit.gitlab.io" target='_blank'>Dr.
-														Rachit
-														Agarwal</a></strong>.
+												<strong><a href="https://rachit.gitlab.io" target='_blank'>
+													Dr. Rachit Agarwal</a></strong>.
 											</p>
 											<a href="https://ieeexplore.ieee.org/abstract/document/9680530"
 												target="_blank">
@@ -644,8 +661,8 @@
 													<div class="row">
 														<div class="col-md-6">
 															<p>Completed MTech in computer science from <a
-																href="https://iitk.ac.in/" target="_blank">IIT
-																Kanpur</a></p>
+																	href="https://iitk.ac.in/" target="_blank">IIT
+																	Kanpur</a></p>
 														</div>
 														<div class="col-md-6">
 															<center>
