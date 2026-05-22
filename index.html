@@ -5,58 +5,678 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>deepesh profile</title>
+	<title>Deepesh Chaudhari — Crypto Forensics Expert & Blockchain Security</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="" />
+	<meta name="description" content="Deepesh Chaudhari — Technical Lead (Crypto Forensics) at C3iHub IIT Kanpur, Founder of BlockStash Intelligence. Blockchain security and cryptocurrency investigation expert." />
+	<meta name="keywords" content="Deepesh Chaudhari, Crypto Forensics, Blockchain Security, BlockStash, C3iHub, IIT Kanpur, Cryptocurrency Investigation" />
+	<meta name="author" content="Deepesh Chaudhari" />
 
-	<meta property="og:title" content="deepesh" />
-	<meta property="og:image" content="deepesh" />
-	<meta property="og:url" content="" />
-	<meta property="og:site_name" content="deepesh" />
-	<meta property="og:description" content="deepesh profile" />
-	<meta name="twitter:title" content="deepesh" />
-	<meta name="twitter:image" content="deepesh-chaudhari" />
-	<meta name="twitter:url" content="https://twitter.com/DeepeshChaudh15" />
-	<meta name="twitter:card" content="" />
+	<meta property="og:title" content="Deepesh Chaudhari — Crypto Forensics & Blockchain Security" />
+	<meta property="og:url" content="https://deepeshchaudhari.github.io" />
+	<meta property="og:site_name" content="Deepesh Chaudhari" />
+	<meta property="og:description" content="Technical Lead (Crypto Forensics) at C3iHub IIT Kanpur | Founder of BlockStash Intelligence" />
 
-	<!-- <link rel="icon" href="images/deepesh-profile.jpg" type="image/x-icon"> -->
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
 	<link rel="stylesheet" href="css/animate.css">
-
 	<link rel="stylesheet" href="css/icomoon.css">
-
 	<link rel="stylesheet" href="css/bootstrap.css">
-
-	<link rel="stylesheet" href="css/flexslider.css">
-
-	<!-- <link rel="stylesheet" href="fonts/flaticon/font/flaticon.html"> -->
-
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/popup.css">
 
+	<script src="js/modernizr-2.6.2.min.js"></script>
 
-	<script src="js/modernizr-2.6.2.min.js" type="287b0f634a4fccf9c9a8fc32-text/javascript"></script>
 	<style>
-		.c1 {
-			font-family: Georgia;
-			font-size: medium;
+		/* ===== DESIGN TOKENS ===== */
+		:root {
+			--primary: #6c63ff;
+			--primary-dark: #5a52d5;
+			--accent: #00d4aa;
+			--dark: #0f0f23;
+			--sidebar-bg: #13131f;
+			--text-dark: #1a1a2e;
+			--text-muted: #8892b0;
+			--border: #e8edf5;
+			--section-alt: #f8f9ff;
 		}
 
-		#more {
-			display: none;
+		/* ===== BASE ===== */
+		body {
+			font-family: 'Inter', Arial, sans-serif;
+			font-weight: 400;
+			font-size: 15px;
+			line-height: 1.8;
+			color: #444;
+			background: #f8f9ff;
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+			font-family: 'Inter', Arial, sans-serif;
+			font-weight: 600;
+			color: var(--text-dark);
+		}
+
+		a { color: var(--primary); transition: color 0.2s; }
+		a:hover { color: var(--primary-dark); text-decoration: none; }
+
+		/* ===== SIDEBAR ===== */
+		#colorlib-aside {
+			background: var(--sidebar-bg) !important;
+			border: none !important;
+			padding-top: 2.5em;
+		}
+
+		#colorlib-aside .author-img {
+			width: 115px;
+			height: 115px;
+			border: 3px solid var(--primary);
+			box-shadow: 0 0 0 7px rgba(108, 99, 255, 0.12);
+			transition: box-shadow 0.3s;
+		}
+
+		#colorlib-aside .author-img:hover {
+			box-shadow: 0 0 0 7px rgba(108, 99, 255, 0.28);
+		}
+
+		#colorlib-aside #colorlib-logo a {
+			color: #ffffff !important;
+			font-size: 17px;
+			font-weight: 700;
+			letter-spacing: 0.5px;
+		}
+
+		#colorlib-aside .position {
+			color: var(--accent) !important;
+			font-size: 10.5px;
+			text-transform: uppercase;
+			letter-spacing: 1.2px;
+			line-height: 1.7;
+		}
+
+		#colorlib-aside .position a {
+			color: var(--accent) !important;
+		}
+
+		#colorlib-aside #colorlib-main-menu ul li a {
+			color: rgba(255, 255, 255, 0.55) !important;
+			font-size: 10.5px;
+			letter-spacing: 2px;
+			transition: color 0.25s;
+		}
+
+		#colorlib-aside #colorlib-main-menu ul li a:hover,
+		#colorlib-aside #colorlib-main-menu ul li.active a {
+			color: #ffffff !important;
+		}
+
+		#colorlib-aside #colorlib-main-menu ul li a:after,
+		#colorlib-aside #colorlib-main-menu ul li.active a:after {
+			background-color: var(--accent);
+		}
+
+		#colorlib-aside .colorlib-footer {
+			color: rgba(255, 255, 255, 0.25) !important;
+			font-size: 12px;
+		}
+
+		.sidebar-social {
+			display: flex;
+			justify-content: center;
+			gap: 10px;
+			margin: 18px 0 6px;
+		}
+
+		.sidebar-social a {
+			color: rgba(255, 255, 255, 0.45);
+			font-size: 15px;
+			width: 34px;
+			height: 34px;
+			border-radius: 50%;
+			border: 1px solid rgba(255, 255, 255, 0.1);
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			transition: all 0.3s;
+			text-decoration: none !important;
+		}
+
+		.sidebar-social a:hover {
+			color: #fff;
+			border-color: var(--accent);
+			background: rgba(0, 212, 170, 0.12);
+		}
+
+		/* ===== MAIN ===== */
+		#colorlib-main { background: #f8f9ff; }
+
+		.colorlib-about,
+		.colorlib-experience,
+		.colorlib-education,
+		.colorlib-skills,
+		.colorlib-contact,
+		.colorlib-course-projects {
+			padding-top: 5em;
+			padding-bottom: 5em;
+		}
+
+		.colorlib-experience,
+		.colorlib-education,
+		.colorlib-contact { background: #ffffff; }
+
+		/* ===== HEADINGS ===== */
+		.heading-meta {
+			color: var(--primary) !important;
+			font-weight: 600;
+			letter-spacing: 3px;
+			font-size: 10.5px;
+			text-transform: uppercase;
+		}
+
+		.colorlib-heading {
+			font-size: 26px;
+			font-weight: 700;
+			letter-spacing: 1.5px;
+			color: var(--text-dark);
+			margin-bottom: 2.2em;
+			position: relative;
+		}
+
+		.colorlib-heading::after {
+			content: '';
+			position: absolute;
+			bottom: -14px;
+			left: 0;
+			width: 36px;
+			height: 3px;
+			background: var(--primary);
+			border-radius: 2px;
+		}
+
+		/* ===== HERO ===== */
+		.about-hero {
+			background: linear-gradient(135deg, var(--dark) 0%, #1b1b3a 100%);
+			color: white;
+			padding: 3.5em 2.5em;
+			border-radius: 14px;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.about-hero::before {
+			content: '';
+			position: absolute;
+			top: -60%;
+			right: -5%;
+			width: 350px;
+			height: 350px;
+			background: radial-gradient(circle, rgba(108, 99, 255, 0.18) 0%, transparent 70%);
+			pointer-events: none;
+		}
+
+		.about-hero::after {
+			content: '';
+			position: absolute;
+			bottom: -40%;
+			left: 15%;
+			width: 250px;
+			height: 250px;
+			background: radial-gradient(circle, rgba(0, 212, 170, 0.1) 0%, transparent 70%);
+			pointer-events: none;
+		}
+
+		.about-hero h2 {
+			font-size: 40px;
+			font-weight: 700;
+			color: #fff;
+			margin-bottom: 0.25em;
+			line-height: 1.2;
+		}
+
+		.about-hero .hero-title {
+			color: var(--accent);
+			font-size: 14px;
+			font-weight: 500;
+			margin-bottom: 1.5em;
+			letter-spacing: 0.5px;
+		}
+
+		.about-hero p {
+			color: rgba(255, 255, 255, 0.78);
+			font-size: 14.5px;
+			line-height: 1.9;
+			margin-bottom: 1em;
+		}
+
+		.about-hero a { color: var(--accent); }
+
+		.about-hero strong { color: #fff; }
+
+		.hero-badges {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+			margin-top: 1.5em;
+		}
+
+		.hero-badge {
+			background: rgba(108, 99, 255, 0.18);
+			color: rgba(255, 255, 255, 0.9);
+			border: 1px solid rgba(108, 99, 255, 0.35);
+			padding: 5px 14px;
+			border-radius: 20px;
+			font-size: 12px;
+			font-weight: 500;
+		}
+
+		/* ===== PUBLICATION CARDS ===== */
+		.publication-card {
+			background: #fff;
+			border-radius: 12px;
+			padding: 24px 26px;
+			margin-bottom: 18px;
+			border: 1px solid var(--border);
+			border-left: 4px solid var(--primary);
+			box-shadow: 0 2px 14px rgba(0, 0, 0, 0.04);
+			transition: transform 0.25s, box-shadow 0.25s;
+		}
+
+		.publication-card:hover {
+			box-shadow: 0 8px 28px rgba(108, 99, 255, 0.11);
+			transform: translateY(-2px);
+		}
+
+		.publication-card h3 {
+			font-size: 16.5px;
+			font-weight: 600;
+			color: var(--text-dark);
+			margin-bottom: 8px;
+		}
+
+		.pub-meta {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			font-size: 12px;
+			color: var(--text-muted);
+			margin-bottom: 12px;
+			flex-wrap: wrap;
+		}
+
+		.badge-year {
+			background: rgba(108, 99, 255, 0.1);
+			color: var(--primary);
+			padding: 2px 10px;
+			border-radius: 10px;
+			font-weight: 600;
+			font-size: 11px;
+		}
+
+		.publication-card p {
+			font-size: 14px;
+			color: #555;
+			line-height: 1.75;
+			margin-bottom: 10px;
+		}
+
+		.pub-link {
+			font-size: 13px;
+			color: var(--primary);
+			font-weight: 500;
+			display: inline-flex;
+			align-items: center;
+			gap: 5px;
+			text-decoration: none !important;
+		}
+
+		.pub-link:hover { color: var(--primary-dark); }
+
+		/* ===== MODERN TIMELINE ===== */
+		.modern-timeline {
+			position: relative;
+			padding-left: 32px;
+		}
+
+		.modern-timeline::before {
+			content: '';
+			position: absolute;
+			left: 10px;
+			top: 6px;
+			bottom: 6px;
+			width: 2px;
+			background: linear-gradient(to bottom, var(--primary), var(--accent));
+			border-radius: 2px;
+		}
+
+		.timeline-item {
+			position: relative;
+			margin-bottom: 24px;
+		}
+
+		.timeline-item::before {
+			content: '';
+			position: absolute;
+			left: -26px;
+			top: 14px;
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+			background: var(--primary);
+			border: 2px solid #ffffff;
+			box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+		}
+
+		.timeline-item.current::before {
+			background: var(--accent);
+			box-shadow: 0 0 0 3px rgba(0, 212, 170, 0.22);
+		}
+
+		.timeline-card {
+			background: #fff;
+			border-radius: 10px;
+			padding: 20px 22px;
+			border: 1px solid var(--border);
+			box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+			transition: box-shadow 0.25s, border-color 0.25s;
+		}
+
+		.timeline-card:hover {
+			box-shadow: 0 6px 24px rgba(108, 99, 255, 0.1);
+			border-color: rgba(108, 99, 255, 0.18);
+		}
+
+		.timeline-card .org-name {
+			font-size: 17px;
+			font-weight: 700;
+			color: var(--text-dark);
+			margin-bottom: 3px;
+		}
+
+		.timeline-card .role-name {
+			font-size: 14.5px;
+			font-weight: 600;
+			color: var(--primary);
+			margin-bottom: 5px;
+		}
+
+		.timeline-card .duration {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 6px;
+			font-size: 12px;
+			color: var(--text-muted);
+			margin-bottom: 10px;
+		}
+
+		.duration-dot {
+			width: 3px;
+			height: 3px;
+			border-radius: 50%;
+			background: var(--text-muted);
+			display: inline-block;
+		}
+
+		.timeline-card p {
+			font-size: 14px;
+			color: #555;
+			line-height: 1.75;
+			margin-bottom: 0;
+		}
+
+		.current-badge {
+			display: inline-block;
+			background: rgba(0, 212, 170, 0.1);
+			color: #00b894;
+			border: 1px solid rgba(0, 212, 170, 0.3);
+			padding: 2px 9px;
+			border-radius: 10px;
+			font-size: 10.5px;
+			font-weight: 600;
+			letter-spacing: 0.3px;
+			margin-left: 8px;
+			vertical-align: middle;
+		}
+
+		/* ===== EDUCATION CARDS ===== */
+		.edu-card {
+			background: #fff;
+			border-radius: 10px;
+			padding: 22px 24px;
+			border: 1px solid var(--border);
+			display: flex;
+			align-items: flex-start;
+			gap: 18px;
+			margin-bottom: 14px;
+			box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+			transition: box-shadow 0.25s, transform 0.25s;
+		}
+
+		.edu-card:hover {
+			box-shadow: 0 6px 22px rgba(108, 99, 255, 0.1);
+			transform: translateY(-2px);
+		}
+
+		.edu-icon {
+			width: 48px;
+			height: 48px;
+			border-radius: 12px;
+			background: linear-gradient(135deg, var(--primary), var(--accent));
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-shrink: 0;
+			color: white;
+			font-size: 20px;
+		}
+
+		.edu-details h4 {
+			font-size: 15.5px;
+			font-weight: 700;
+			margin-bottom: 3px;
+			color: var(--text-dark);
+		}
+
+		.edu-details .degree {
+			font-size: 13.5px;
+			color: var(--primary);
+			font-weight: 500;
+			margin-bottom: 3px;
+		}
+
+		.edu-details .year {
+			font-size: 12px;
+			color: var(--text-muted);
+		}
+
+		/* ===== SKILLS ===== */
+		.skills-grid {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 9px;
+			margin-bottom: 28px;
+		}
+
+		.skill-tag {
+			background: #fff;
+			border: 1px solid var(--border);
+			color: var(--text-dark);
+			padding: 7px 16px;
+			border-radius: 25px;
+			font-size: 13px;
+			font-weight: 500;
+			transition: all 0.25s;
+			box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
+			cursor: default;
+		}
+
+		.skill-tag:hover {
+			background: var(--primary);
+			color: #fff;
+			border-color: var(--primary);
+			transform: translateY(-2px);
+			box-shadow: 0 4px 14px rgba(108, 99, 255, 0.22);
+		}
+
+		.skill-tag.featured {
+			background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+			color: #fff;
+			border-color: transparent;
+			box-shadow: 0 3px 12px rgba(108, 99, 255, 0.25);
+		}
+
+		.skill-tag.featured:hover {
+			background: linear-gradient(135deg, var(--primary-dark), #4a41c0);
+			transform: translateY(-2px);
+		}
+
+		.skills-section-label {
+			font-size: 11px;
+			text-transform: uppercase;
+			letter-spacing: 2.5px;
+			color: var(--text-muted);
+			margin-bottom: 14px;
+			margin-top: 28px;
+			font-weight: 600;
+		}
+
+		/* ===== SERVICES ===== */
+		.services {
+			border-radius: 10px !important;
+			border: 1px solid var(--border) !important;
+			border-bottom: 3px solid var(--primary) !important;
+			box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05) !important;
+			transition: transform 0.25s, box-shadow 0.25s !important;
+		}
+
+		.services:hover {
+			transform: translateY(-4px);
+			box-shadow: 0 10px 30px rgba(108, 99, 255, 0.12) !important;
+		}
+
+		/* ===== PANELS / PROJECTS ===== */
+		.panel-heading a {
+			background: var(--primary) !important;
+			border-radius: 6px 6px 0 0 !important;
+			font-size: 13px !important;
+			letter-spacing: 0.3px !important;
+		}
+
+		.panel-heading a.collapsed {
+			background: #fff !important;
+			color: var(--text-dark) !important;
+			border: 1px solid var(--border) !important;
+			border-radius: 6px !important;
+		}
+
+		.panel-heading a.collapsed:hover {
+			background: #f2f0ff !important;
+			border-color: rgba(108, 99, 255, 0.25) !important;
+		}
+
+		.panel-body {
+			border-radius: 0 0 6px 6px !important;
+			border-color: var(--border) !important;
+			font-size: 14px;
+		}
+
+		.panel-body ul li { margin-bottom: 5px; }
+
+		/* ===== CONTACT CARD ===== */
+		.contact-card {
+			background: #fff;
+			border-radius: 12px;
+			padding: 30px 32px;
+			border: 1px solid var(--border);
+			box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+		}
+
+		.colorlib-feature .colorlib-icon {
+			background: linear-gradient(135deg, rgba(108, 99, 255, 0.08), rgba(0, 212, 170, 0.08)) !important;
+			border-radius: 12px !important;
+		}
+
+		.colorlib-feature .colorlib-icon i {
+			color: var(--primary) !important;
+			font-size: 26px !important;
+		}
+
+		.colorlib-feature .colorlib-text h3 {
+			font-size: 12px;
+			color: var(--text-muted);
+			text-transform: uppercase;
+			letter-spacing: 2px;
+		}
+
+		/* ===== FOOTER CTA ===== */
+		.footer-cta {
+			background: linear-gradient(135deg, var(--dark) 0%, #1b1b3a 100%);
+			padding: 4em 2.5em;
+			text-align: center;
+		}
+
+		.footer-cta h3 {
+			color: #fff;
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+
+		.footer-cta p {
+			color: rgba(255, 255, 255, 0.55);
+			margin-bottom: 28px;
+		}
+
+		.btn-primary {
+			background: var(--primary) !important;
+			border-color: var(--primary) !important;
+			border-radius: 6px !important;
+			padding: 11px 28px !important;
+			font-weight: 600 !important;
+			letter-spacing: 0.8px;
+			transition: background 0.25s, transform 0.2s !important;
+		}
+
+		.btn-primary:hover {
+			background: var(--primary-dark) !important;
+			border-color: var(--primary-dark) !important;
+			transform: translateY(-1px);
+		}
+
+		.btn-outline-light {
+			background: transparent !important;
+			border: 1px solid rgba(255, 255, 255, 0.3) !important;
+			color: rgba(255, 255, 255, 0.8) !important;
+			border-radius: 6px !important;
+			padding: 11px 28px !important;
+			font-weight: 500 !important;
+			letter-spacing: 0.8px;
+			margin-left: 10px;
+			transition: all 0.25s !important;
+		}
+
+		.btn-outline-light:hover {
+			background: rgba(255, 255, 255, 0.08) !important;
+			color: #fff !important;
+		}
+
+		/* ===== READ MORE ===== */
+		#more { display: none; }
+
+		/* ===== RESPONSIVE ===== */
+		@media (max-width: 768px) {
+			.about-hero h2 { font-size: 26px; }
+			.about-hero { padding: 2.5em 1.8em; }
+			.edu-card { flex-direction: column; gap: 12px; }
+			.modern-timeline { padding-left: 24px; }
 		}
 	</style>
+
 	<script>
 		function readmore() {
 			var dots = document.getElementById("dots");
 			var moreText = document.getElementById("more");
 			var btnText = document.getElementById("myBtn");
-
 			if (dots.style.display === "none") {
 				dots.style.display = "inline";
 				btnText.innerHTML = "Read more";
@@ -75,19 +695,37 @@
 		<div class="container-wrap">
 			<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar"
 				aria-expanded="false" aria-controls="navbar"><i></i></a>
+
+			<!-- ===== SIDEBAR ===== -->
 			<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
 				<div class="text-center">
 					<div class="author-img" style="background-image: url(images/deepesh-chaudhari.png);"></div>
-					<h1 id="colorlib-logo"><a href="index.html">deepesh</a></h1>
-					<span class="position">Senior Project Executive Engg. <br /> at <a href=https://iitk.ac.in
-							target="_blank"><b>IIT-Kanpur</b></a></span>
+					<h1 id="colorlib-logo"><a href="index.html">Deepesh Chaudhari</a></h1>
+					<span class="position">
+						Technical Lead (Crypto Forensics)<br>
+						@ <a href="https://c3ihub.org" target="_blank">C3iHub, IIT Kanpur</a><br>
+						Founder @ <a href="https://blockstash.in" target="_blank">BlockStash</a>
+					</span>
 				</div>
+
+				<div class="sidebar-social">
+					<a href="https://www.linkedin.com/in/amideepesh" target="_blank" title="LinkedIn">
+						<i class="icon-linkedin2"></i>
+					</a>
+					<a href="https://blockstash.in" target="_blank" title="BlockStash">
+						<i class="icon-globe-outline"></i>
+					</a>
+					<a href="mailto:deepeshchaudhari0786@gmail.com" title="Email">
+						<i class="icon-mail2"></i>
+					</a>
+				</div>
+
 				<nav id="colorlib-main-menu" role="navigation" class="navbar">
 					<div id="navbar" class="collapse">
 						<ul>
 							<li class="active"><a href="#" data-nav-section="home">Home</a></li>
-							<li><a href="#" data-nav-section="reseach-work">Research & Publications</a></li>
-							<li><a href="#" data-nav-section="course-projects">Course Projects</a></li>
+							<li><a href="#" data-nav-section="reseach-work">Publications</a></li>
+							<li><a href="#" data-nav-section="course-projects">Projects</a></li>
 							<li><a href="#" data-nav-section="experience">Experience</a></li>
 							<li><a href="#" data-nav-section="education">Education</a></li>
 							<li><a href="#" data-nav-section="skills">Skills</a></li>
@@ -95,111 +733,47 @@
 						</ul>
 					</div>
 				</nav>
+
 				<div class="colorlib-footer">
 					<p><small>&copy;
-							Copyright &copy;
-							<script
-								type="287b0f634a4fccf9c9a8fc32-text/javascript">document.write(new Date().getFullYear());</script>
-							</span>
-						</small></p>
+						<script>document.write(new Date().getFullYear());</script>
+						Deepesh Chaudhari
+					</small></p>
 				</div>
 			</aside>
-			<!-- ==================================================MAIN PAGE SLIADER==================================================================== -->
+
+			<!-- ===== MAIN ===== -->
 			<div id="colorlib-main">
 
-				<!-- ========================================================= Biography================================================================================ -->
+				<!-- ===== ABOUT / BIO ===== -->
 				<section class="colorlib-about" data-section="home">
 					<div class="colorlib-narrow-content">
 						<div class="row">
-							<div class="col-md-12">
-								<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-									<div class="col-md-12">
-										<div class="about-desc">
-											<span class="heading-meta">Biography</span>
-											<h2 class="colorlib-heading">deepesh</h2>
-											<div style="font-family:Georgia; font-size:medium; align="justify"">
-												<p><strong>deepesh</strong> is a Founder and CEO of <a href="https://blockstash.in" target="_blank">BlockStash Intelligence</a>.
-												He completed his MTech in computer science from 
-												<a href="https://www.iitk.ac.in" target="_blank"><strong>IIT-Kanpur</strong></a> 
-												in 2021, with guidance from Prof. Sandeep Shukla. Prior to that, he completed
-												his BTech at <a href="https://allenhouse.ac.in/" target="_blank"><strong> Allenhouse Group of
-												Colleges</strong></a>, Kanpur in 2018. During his master's program, He focused
-												on the detection of malicious accounts on the Bitcoin blockchain, leading 
-												to the publication of a research paper. Building upon his thesis work,
-												he started a startup <a href="https://blockstash.in" target="_blank">BlockStash Intelligence</a>.
-												where he is currently involved in the development of an analytic tool 
-												for investigating and monitoring illicit activities related to cryptocurrencies.
-											</div>
-
-										</div>
-									</div>
-								</div>
-
-							</div>
-						</div>
-				</section>
-				<!-- =========================================================Research work================================================================================ -->
-				<section class="colorlib-about" data-section="reseach-work">
-					<div class="colorlib-narrow-content">
-						<div class="row">
-							<div class="col-md-12">
-								<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-									<div class="col-md-12">
-										<div class="about-desc">
-											<span class="heading-meta">Research & Publicaitons</span>
-											<h2 class="colorlib-heading">Towards Malicious address identification in
-												Bitcoin</h2>
-
-											<p style="font-family:Georgia;font-size:medium;" align="justify">
-												The temporal aspect of blockchain transactions enables us to study the
-												address's behavior and detect if it is involved in any illicit activity.
-												However, due to the concept of change addresses (used to thwart replay
-												attacks), temporal aspects are not directly applicable in the Bitcoin
-												blockchain. Several pre-processing steps should be performed before such
-												temporal aspects are utilized. We are motivated to study the Bitcoin
-												transaction network and use the temporal features
-											<span id="dots" style="font-family:Georgia;font-size:medium;" align="justify">
-											...
-											</span>
-											<span id="more" style="font-family:Georgia;font-size:medium;" align="justify">
-												such as burst, attractiveness, and inter-event time along with several
-												graph-based properties such as the degree of node and clustering coefficient to
-												validate the applicability of already existing approaches known for
-												other cryptocurrency blockchains on the Bitcoin blockchain. We generate
-												the temporal and non-temporal feature set and train the Machine Learning
-												(ML) algorithm over different temporal granularities to validate the
-												state-of-the-art methods. We study the behavior of the addresses over
-												different time granularities of the dataset. We identify that after
-												applying change-address clustering, in Bitcoin, existing temporal
-												features can be extracted and ML approaches can be applied. A
-												comparative analysis of results show that the behavior of addresses in
-												Ethereum and Bitcoin is similar with respect to in-degree, out-degree
-												and inter-event time. Further, we identify 3 suspects that showed
-												malicious behavior across different temporal granularities. These
-												suspects are not marked as malicious in Bitcoin.
-											</span>
-											<a href="javascript:void(0)" onclick="readmore()" id="myBtn">Read more</a>
-											</p>
-											</br>
-											<p style="font-family:Georgia;font-size:medium;" align="justify">
-												This work was done under the guidance of <strong><a
-														href="http://www.google.com/search?q=+Sandeep+Shukla"
-														target="_blank"> Prof. Sandeep Shukla</a></strong> and
-												<strong><a href="https://rachit.gitlab.io" target='_blank'>
-													Dr. Rachit Agarwal</a></strong>.
-											</p>
-											<a href="https://ieeexplore.ieee.org/abstract/document/9680530"
-												target="_blank">
-												<p
-													style="font-family:'Courier New', Courier, monospace;font-size:medium;">
-													[D. Chaudhari, R. Agarwal and S. K. Shukla, "Towards Malicious
-													address identification in Bitcoin," 2021 IEEE International
-													Conference
-													on Blockchain (Blockchain), 2021, pp. 425-432, doi:
-													10.1109/Blockchain53845.2021.00066.]</p>
-											</a>
-
-										</div>
+							<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+								<div class="about-hero">
+									<span class="heading-meta" style="color: var(--accent); margin-bottom: 12px; display: block; font-size: 11px;">Hello, I'm</span>
+									<h2>Deepesh Chaudhari</h2>
+									<p class="hero-title">
+										Technical Lead (Crypto Forensics) @ C3iHub, IIT Kanpur &nbsp;&middot;&nbsp; Founder &amp; CEO @ BlockStash Intelligence
+									</p>
+									<p>
+										Founder of <a href="https://blockstash.in" target="_blank">BlockStash Intelligence</a> — a Blockchain
+										security startup incubated at FIRST, IIT Kanpur. Developing cutting-edge solutions for cryptocurrency
+										investigation &amp; surveillance, collaborating with <a href="https://c3ihub.org" target="_blank">C3iHub, IIT Kanpur</a>
+										to detect &amp; prevent illicit activities on blockchain networks. Empowering law enforcement &amp;
+										financial institutions to ensure digital financial integrity.
+									</p>
+									<p>
+										Worked closely with <strong>FIU-India, Intelligence Bureau, Income Tax, Enforcement Directorate,
+										National Police Academy, West Bengal Police, Telangana State Police, I4C, CID</strong> and <strong>NIA</strong>.
+									</p>
+									<div class="hero-badges">
+										<span class="hero-badge">Crypto Forensics</span>
+										<span class="hero-badge">Blockchain Security</span>
+										<span class="hero-badge">Cybercrime Investigation</span>
+										<span class="hero-badge">Intelligence Analysis</span>
+										<span class="hero-badge">Machine Learning</span>
+										<span class="hero-badge">IIT Kanpur MTech</span>
 									</div>
 								</div>
 							</div>
@@ -207,337 +781,235 @@
 					</div>
 				</section>
 
-				<!-- ===================================================Course TAB============================================================================= -->
+				<!-- ===== PUBLICATIONS ===== -->
+				<section class="colorlib-about" data-section="reseach-work">
+					<div class="colorlib-narrow-content">
+						<div class="row">
+							<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+								<span class="heading-meta">Academic Work</span>
+								<h2 class="colorlib-heading">Research &amp; Publications</h2>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+
+								<!-- Publication 1 -->
+								<div class="publication-card">
+									<h3>Towards Malicious Address Identification in Bitcoin</h3>
+									<div class="pub-meta">
+										<span class="badge-year">IEEE 2021</span>
+										<span>International Conference on Blockchain, Melbourne, Australia &middot; pp. 425–432</span>
+									</div>
+									<p>
+										The temporal aspect of blockchain transactions enables us to study address behavior and detect
+										illicit activity. We study the Bitcoin transaction network using temporal features such as burst,
+										attractiveness, and inter-event time, along with graph-based properties to validate ML-based
+										approaches for malicious address detection.
+										<span id="dots">...</span>
+									</p>
+									<span id="more">
+										<p>
+											After applying change-address clustering in Bitcoin, existing temporal features can be extracted
+											and ML approaches applied. A comparative analysis shows address behavior in Ethereum and Bitcoin
+											is similar with respect to in-degree, out-degree, and inter-event time. We identify 3 suspects
+											showing malicious behavior across different temporal granularities not previously marked as
+											malicious in Bitcoin.
+										</p>
+										<p style="font-size:13px; color: #666;">
+											Under guidance of <strong>Prof. Sandeep K. Shukla</strong> &amp; <strong>Dr. Rachit Agarwal</strong>, IIT Kanpur.
+										</p>
+									</span>
+									<a href="javascript:void(0)" onclick="readmore()" id="myBtn"
+										style="color: var(--primary); font-weight: 500; font-size: 13px;">Read more</a>
+									<br><br>
+									<a href="https://ieeexplore.ieee.org/abstract/document/9680530" target="_blank" class="pub-link">
+										<i class="icon-link2"></i>
+										D. Chaudhari, R. Agarwal, S.K. Shukla — IEEE Blockchain 2021, doi: 10.1109/Blockchain53845.2021.00066
+									</a>
+								</div>
+
+								<!-- Publication 2 -->
+								<div class="publication-card">
+									<h3>Blockstash Intelligence: Real-time Crypto Crime Investigation and Forensics Tool</h3>
+									<div class="pub-meta">
+										<span class="badge-year">Research</span>
+										<span>BlockStash Intelligence &middot; C3iHub, IIT Kanpur</span>
+									</div>
+									<p>
+										A comprehensive real-time platform for cryptocurrency crime investigation and forensics, enabling
+										law enforcement agencies and financial institutions to trace, analyze, and investigate illicit
+										blockchain transactions. Integrates graph analysis, entity clustering algorithms, and machine
+										learning for actionable intelligence and visual transaction tracing.
+									</p>
+								</div>
+
+								<!-- Publication 3 -->
+								<div class="publication-card">
+									<h3>Optimizing Bitcoin Address Clustering and Uncovering New Insights</h3>
+									<div class="pub-meta">
+										<span class="badge-year">Research</span>
+										<span>C3iHub, IIT Kanpur</span>
+									</div>
+									<p>
+										Introduces novel approaches to heuristic-based clustering, change address detection, and
+										behavioral pattern analysis to improve Bitcoin address clustering techniques and entity
+										identification — uncovering previously unknown insights about Bitcoin address ownership
+										and transaction flows at scale.
+									</p>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- ===== COURSE PROJECTS ===== -->
 				<section class="colorlib-course-projects" data-section="course-projects">
 					<div class="colorlib-narrow-content">
 						<div class="row">
-							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
-								data-animate-effect="fadeInLeft">
-								<span class="heading-meta">Course projects</span>
-								<h2 class="colorlib-heading animate-box">Course projects</h2>
+							<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+								<span class="heading-meta">Academic Work</span>
+								<h2 class="colorlib-heading animate-box">Course Projects</h2>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
 								<div class="fancy-collapse-panel">
 									<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-
 
 										<div class="panel panel-default">
 											<div class="panel-heading" role="tab" id="heading1">
 												<h4 class="panel-title">
 													<a class="collapsed" data-toggle="collapse" data-parent="#accordion"
-														href="#collapse1" aria-expanded="false"
-														aria-controls="collapse1"><strong>Malware detection using ML
-															techniques (CS698M), Guide: Prof. Sandeep. K. Shukla
-														</strong>
+														href="#collapse1" aria-expanded="false" aria-controls="collapse1">
+														Malware Detection using ML Techniques (CS698M) &mdash; Prof. Sandeep K. Shukla
 													</a>
 												</h4>
 											</div>
-											<div id="collapse1" class="panel-collapse collapse" role="tabpanel"
-												aria-labelledby="heading1"
-												style="font-family:Georgia;font-size:medium;">
+											<div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
 												<div class="panel-body">
-													<div class="row">
-														<div class="col-md-6">
-															<ul>
-																<li align="justify">
-																	Performed feature analysis on executables, compared
-																	different ML models to find benign and malware and
-																	get best performance by Random Forest Model.
-																</li>
-																<li>
-																	Technology used: Python and Linux shell script.
-																</li>
-
-															</ul>
-														</div>
-														<div class="col-md-6">
-															<center>
-																<img src="images/load_balancer.png" height="20%"
-																	width="20%">
-															</center>
-															<center>
-																<i>(from Feb'20- till Mar'20)</i>
-															</center>
-														</div>
-													</div>
+													<ul>
+														<li>Performed feature analysis on executables, compared different ML models to classify benign vs. malware. Best performance via Random Forest Model.</li>
+														<li>Technology: Python, Linux shell script &nbsp;&middot;&nbsp; <em>Feb–Mar 2020</em></li>
+													</ul>
 												</div>
 											</div>
 										</div>
-										<!-- ============================================================================================= -->
 
-
-										<!-- ============================================================================================= -->
 										<div class="panel panel-default">
 											<div class="panel-heading" role="tab" id="headingOne1">
 												<h4 class="panel-title">
 													<a class="collapsed" data-toggle="collapse" data-parent="#accordion"
-														href="#collapseOne1" aria-expanded="false"
-														aria-controls="collapseOne1"><strong>Load Balancer (CS654A),
-															Guide: Prof. T.V. Prabhakar </strong>
+														href="#collapseOne1" aria-expanded="false" aria-controls="collapseOne1">
+														Load Balancer (CS654A) &mdash; Prof. T.V. Prabhakar
 													</a>
 												</h4>
 											</div>
-											<div id="collapseOne1" class="panel-collapse collapse" role="tabpanel"
-												aria-labelledby="headingOne1"
-												style="font-family:Georgia;font-size:medium;">
+											<div id="collapseOne1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne1">
 												<div class="panel-body">
-													<div class="row">
-														<div class="col-md-6">
-															<ul>
-																<li align='justify'>
-																	Implemented a load balancer to distribute traffic on
-																	multiple servers based on request.
-																</li>
-																<li>
-																	Technology used: core PHP, HTML5, CSS, MySQL and
-																	Docker.
-																</li>
-
-															</ul>
-														</div>
-														<div class="col-md-6">
-															<center>
-																<img src="images/load_balancer.png" height="20%"
-																	width="20%">
-															</center>
-															<center>
-																<i>
-																	(from Aug'19- till Sept'19 )
-																</i>
-															</center>
-														</div>
-													</div>
+													<ul>
+														<li>Implemented a load balancer to distribute traffic across multiple servers based on request type.</li>
+														<li>Technology: core PHP, HTML5, CSS, MySQL, Docker &nbsp;&middot;&nbsp; <em>Aug–Sep 2019</em></li>
+													</ul>
 												</div>
 											</div>
 										</div>
-										<!-- ============================================================================================= -->
+
 										<div class="panel panel-default">
 											<div class="panel-heading" role="tab" id="headingTwo1">
 												<h4 class="panel-title">
 													<a class="collapsed" data-toggle="collapse" data-parent="#accordion"
-														href="#collapseTwo1" aria-expanded="false"
-														aria-controls="collapseTwo1"><b>Fault Tolerance site (CS654A),
-															Guide: Prof. T.V. Prabhakar</b>
+														href="#collapseTwo1" aria-expanded="false" aria-controls="collapseTwo1">
+														Fault Tolerance Site (CS654A) &mdash; Prof. T.V. Prabhakar
 													</a>
 												</h4>
 											</div>
-											<div id="collapseTwo1" class="panel-collapse collapse" role="tabpanel"
-												aria-labelledby="headingTwo1"
-												style="font-family:Georgia;font-size:medium;">
+											<div id="collapseTwo1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo1">
 												<div class="panel-body">
-													<div class="row">
-														<div class="col-md-6">
-															<ul>
-																<li align='justify'>
-																	Designed a highly available website (replicate
-																	ping-echo and active redundancy) hosted on multiple
-																	servers.
-																</li>
-																<li>
-																	Technology used: PHP, HTML, CSS, MySQL and Docker
-																</li>
-															</ul>
-														</div>
-														<div class="col-md-6">
-															<center>
-																<img src="images/warning.png" height="20%" width="20%">
-															</center>
-															<center>
-																<i>
-																	(from Sept'19- till Oct'19 )
-																</i>
-															</center>
-														</div>
-													</div>
+													<ul>
+														<li>Designed a highly available website (replicate ping-echo and active redundancy) hosted across multiple servers.</li>
+														<li>Technology: PHP, HTML, CSS, MySQL, Docker &nbsp;&middot;&nbsp; <em>Sep–Oct 2019</em></li>
+													</ul>
 												</div>
 											</div>
 										</div>
-										<!-- ================================================================================================== -->
+
 										<div class="panel panel-default">
 											<div class="panel-heading" role="tab" id="headingFour1">
 												<h4 class="panel-title">
 													<a class="collapsed" data-toggle="collapse" data-parent="#accordion"
-														href="#collapseFour1" aria-expanded="false"
-														aria-controls="collapseFour1"><b>Recommendation system (CS771A),
-															Guide: Prof. Purushottam Kar
-														</b></a>
+														href="#collapseFour1" aria-expanded="false" aria-controls="collapseFour1">
+														Recommendation System (CS771A) &mdash; Prof. Purushottam Kar
+													</a>
 												</h4>
 											</div>
-											<div id="collapseFour1" class="panel-collapse collapse" role="tabpanel"
-												aria-labelledby="headingFour1"
-												style="font-family:Georgia;font-size:medium;">
+											<div id="collapseFour1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour1">
 												<div class="panel-body">
-													<div class="row">
-														<div class="col-md-6">
-															<ul>
-																<li align="justify">
-																	Recommendation system which recommends top 5 items,
-																	Implemented Bonsai - Diverse and Shallow Trees for
-																	Extreme Multi-Label Classification and used K-means
-																	clustering for label partition at each node.
-																</li>
-																<li>
-																	Technology used: Python and C++
-																</li>
-															</ul>
-															<br>
-														</div>
-														<div class="col-md-6">
-															<center>
-																<img src="images/advise.png" height="20%" width="20%">
-															</center>
-															<center>
-																<i>
-																	( from Aug'19- till Dec'19 )
-																</i>
-															</center>
-														</div>
-													</div>
+													<ul>
+														<li>Built a recommendation system returning top-5 items. Implemented Bonsai — Diverse and Shallow Trees for Extreme Multi-Label Classification with K-means clustering for label partition.</li>
+														<li>Technology: Python, C++ &nbsp;&middot;&nbsp; <em>Aug–Dec 2019</em></li>
+													</ul>
 												</div>
 											</div>
 										</div>
-										<!-- ====================================================================== -->
+
 										<div class="panel panel-default">
 											<div class="panel-heading" role="tab" id="headingFourA">
 												<h4 class="panel-title">
 													<a class="collapsed" data-toggle="collapse" data-parent="#accordion"
-														href="#collapseFourA" aria-expanded="false"
-														aria-controls="collapseFourA"><b>DeCAPTCHA (CS771A), Guide:
-															Prof. Purushottam Kar
-														</b></a>
+														href="#collapseFourA" aria-expanded="false" aria-controls="collapseFourA">
+														DeCAPTCHA (CS771A) &mdash; Prof. Purushottam Kar
+													</a>
 												</h4>
 											</div>
-											<div id="collapseFourA" class="panel-collapse collapse" role="tabpanel"
-												aria-labelledby="headingFourA"
-												style="font-family:Georgia;font-size:medium;">
+											<div id="collapseFourA" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFourA">
 												<div class="panel-body">
-													<div class="row">
-														<div class="col-md-6">
-															<ul>
-																<li align="justify">
-																	We trained a convolutional neural network model to
-																	identify each character in the image(CAPTCHA) which
-																	involves extraction of individual characters from
-																	given CAPTCHA images which are then used for
-																	training the model.
-																</li>
-																<li>
-																	Technology used: Python
-																</li>
-															</ul>
-															<br>
-														</div>
-														<div class="col-md-6">
-															<center>
-																<img src="images/captcha.png" height="20%" width="20%">
-															</center>
-															<center>
-																<i>
-																	(from Oct'19-till Nov'19 )
-																</i>
-															</center>
-														</div>
-													</div>
+													<ul>
+														<li>Trained a CNN model to identify each character in CAPTCHA images by extracting and classifying individual characters.</li>
+														<li>Technology: Python &nbsp;&middot;&nbsp; <em>Oct–Nov 2019</em></li>
+													</ul>
 												</div>
 											</div>
 										</div>
-										<!-- ==================================================== -->
+
 										<div class="panel panel-default">
 											<div class="panel-heading" role="tab" id="headingFourB">
 												<h4 class="panel-title">
 													<a class="collapsed" data-toggle="collapse" data-parent="#accordion"
-														href="#collapseFourB" aria-expanded="false"
-														aria-controls="collapseFourB"><b>POS Tagger and Bottom-up parser
-															(CS673A), Guide: Prof. Ajai Jain
-														</b></a>
+														href="#collapseFourB" aria-expanded="false" aria-controls="collapseFourB">
+														POS Tagger &amp; Bottom-up Parser (CS673A) &mdash; Prof. Ajai Jain
+													</a>
 												</h4>
 											</div>
-											<div id="collapseFourB" class="panel-collapse collapse" role="tabpanel"
-												aria-labelledby="headingFourB"
-												style="font-family:Georgia;font-size:medium;">
+											<div id="collapseFourB" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFourB">
 												<div class="panel-body">
-													<div class="row">
-														<div class="col-md-6">
-															<ul>
-																<li align="justify">
-																	Trained a POS tagging model using training corpus
-																	containing POS tags for english sentences, used to
-																	calculate F-score and predict tagging, Designed a
-																	bottom up parser to parse sentences using given
-																	grammar.
-																</li>
-																<li>
-																	Technology used: Python and C++
-																</li>
-															</ul>
-															<br>
-														</div>
-														<div class="col-md-6">
-															<center>
-																<img src="images/price-tag.png" height="20%"
-																	width="20%">
-															</center>
-															<center>
-																<i>
-																	( from Jan'20- till Feb'20 )
-																</i>
-															</center>
-														</div>
-													</div>
+													<ul>
+														<li>Trained a POS tagging model using a labeled corpus; calculated F-score and predicted tagging. Designed a bottom-up parser using a given grammar.</li>
+														<li>Technology: Python, C++ &nbsp;&middot;&nbsp; <em>Jan–Feb 2020</em></li>
+													</ul>
 												</div>
 											</div>
 										</div>
-										<!-- ==================================================== -->
+
 										<div class="panel panel-default">
 											<div class="panel-heading" role="tab" id="headingFourC">
 												<h4 class="panel-title">
 													<a class="collapsed" data-toggle="collapse" data-parent="#accordion"
-														href="#collapseFourC" aria-expanded="false"
-														aria-controls="collapseFourC"><b>Verification using SAT/SMT
-															solver (CS675A), Guide: Prof. Pramod Subramanyan
-														</b></a>
+														href="#collapseFourC" aria-expanded="false" aria-controls="collapseFourC">
+														Verification using SAT/SMT Solver (CS675A) &mdash; Prof. Pramod Subramanyan
+													</a>
 												</h4>
 											</div>
-											<div id="collapseFourC" class="panel-collapse collapse" role="tabpanel"
-												aria-labelledby="headingFourC"
-												style="font-family:Georgia;font-size:medium;">
+											<div id="collapseFourC" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFourC">
 												<div class="panel-body">
-													<div class="row">
-														<div class="col-md-6">
-															<ul>
-																<li align="justify">
-																	Used SAT solver(sat4j) to detect tampering in
-																	manufactured circuits and to test equality of given
-																	firewalls.
-																</li>
-																<li align="justify">
-																	Also used SMT solver(z3) solvers to solve various
-																	problems including sum-sudoku, which is a slightly
-																	modified version of the usual sudoku.
-																</li>
-																<li>
-																	Technology used: Scala
-																</li>
-															</ul>
-															<br>
-														</div>
-														<div class="col-md-6">
-															<center>
-																<img src="images/secure.png" height="20%" width="20%">
-															</center>
-															<center>
-																<i>
-																	( from Feb'20- till Mar'20 )
-																</i>
-															</center>
-														</div>
-													</div>
+													<ul>
+														<li>Used SAT solver (sat4j) to detect tampering in manufactured circuits and test firewall rule equality.</li>
+														<li>Used SMT solver (z3) to solve problems including a sum-sudoku variant.</li>
+														<li>Technology: Scala &nbsp;&middot;&nbsp; <em>Feb–Mar 2020</em></li>
+													</ul>
 												</div>
 											</div>
 										</div>
-										<!-- ==================================================== -->
 
 									</div>
 								</div>
@@ -545,474 +1017,376 @@
 						</div>
 					</div>
 				</section>
-				<!-- =========================================================EXPERIENCE TAB ================================================================= -->
+
+				<!-- ===== EXPERIENCE ===== -->
 				<section class="colorlib-experience" data-section="experience">
 					<div class="colorlib-narrow-content">
 						<div class="row">
-							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
-								data-animate-effect="fadeInLeft">
-								<span class="heading-meta">Experience</span>
+							<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+								<span class="heading-meta">Career</span>
 								<h2 class="colorlib-heading animate-box">Work Experience</h2>
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-md-12">
-								<div class="timeline-centered">
-									<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-										<div class="timeline-entry-inner">
-											<div class="timeline-icon color-1">
-												<i class="icon-pen2"></i>
-											</div>
-											<div class="timeline-label">
-												<h2>
-													<a href="https://www.adityabirla.com/" target="_blank">Internship in
-														Aditya Birla Group</a> <span>2016-2017</span>
-												</h2>
-												<div style="font-family:Georgia;font-size:medium;">
-													There, I worked in two project.
-													<ul>
-														<li>company survey management,</li>
-														<li>A small scale CRM(customer relationship management).</li>
-													</ul>
-													<p>both project developed in JSP(java server page) technology.</p>
-												</div>
-											</div>
-										</div>
-									</article>
-									<article class="timeline-entry animate-box" data-animate-effect="fadeInRight"
-										style="font-family:Georgia;font-size:medium;">
-										<div class="timeline-entry-inner">
-											<div class="timeline-icon color-2">
-												<i class="icon-pen2"></i>
-											</div>
-											<div class="timeline-label">
+							<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+								<div class="modern-timeline">
 
-												<h2>
-													<a href="https://nashamukti.net/" target="_blank">Web developer for
-														NashaMukti Kendra(NGO)</a> <span>2015-2016</span>
-												</h2>
-												<ul>
-													<li>
-														<p>A kind of hospital management web application for NashaMukti
-															kendra(NGO) in which they can manage there medicine and
-															patient's status.
-														</p>
-													</li>
-												</ul>
+									<!-- C3iHub — Technical Lead -->
+									<div class="timeline-item current">
+										<div class="timeline-card">
+											<div class="org-name">
+												C3iHub, IIT Kanpur
+												<span class="current-badge">Current</span>
+											</div>
+											<div class="role-name">Technical Lead — Crypto Forensics</div>
+											<div class="duration">
+												<span>January 2025 – Present</span>
+												<span class="duration-dot"></span>
+												<span>1 year 5 months</span>
+												<span class="duration-dot"></span>
+												<span>Kanpur, India</span>
+											</div>
+											<p>Leading the crypto forensics team at C3iHub, IIT Kanpur. Developing tools and methodologies
+											for cryptocurrency tracing, blockchain investigation, and digital asset forensics in collaboration
+											with national law enforcement and intelligence agencies.</p>
+										</div>
+									</div>
 
+									<!-- BlockStash — Founder -->
+									<div class="timeline-item current">
+										<div class="timeline-card">
+											<div class="org-name">
+												BlockStash Intelligence
+												<span class="current-badge">Current</span>
+											</div>
+											<div class="role-name">Founder &amp; CEO</div>
+											<div class="duration">
+												<span>October 2022 – Present</span>
+												<span class="duration-dot"></span>
+												<span>3 years 8 months</span>
+												<span class="duration-dot"></span>
+												<span>India</span>
+											</div>
+											<p>Blockchain security startup incubated at FIRST, IIT Kanpur (3rd Cohort program). Building
+											innovative crypto investigation and forensics solutions. Expertise in Blockchain, Cryptography,
+											Cryptocurrencies, Big data analysis, Graph analytics, Machine learning, and Cybersecurity.</p>
+										</div>
+									</div>
+
+									<!-- C3iHub — Sr Project Exec -->
+									<div class="timeline-item">
+										<div class="timeline-card">
+											<div class="org-name">C3iHub, IIT Kanpur</div>
+											<div class="role-name">Senior Project Executive Engineer</div>
+											<div class="duration">
+												<span>February 2024 – January 2025</span>
+												<span class="duration-dot"></span>
+												<span>1 year</span>
+												<span class="duration-dot"></span>
+												<span>Kanpur, India</span>
 											</div>
 										</div>
-									</article>
-									<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft"
-										style="font-family:Georgia;font-size:medium;">
-										<div class="timeline-entry-inner">
-											<div class="timeline-icon color-3">
-												<i class="icon-pen2"></i>
+									</div>
+
+									<!-- IIT Kanpur — Sr Project Exec Engineer -->
+									<div class="timeline-item">
+										<div class="timeline-card">
+											<div class="org-name">Indian Institute of Technology, Kanpur</div>
+											<div class="role-name">Sr. Project Executive Engineer</div>
+											<div class="duration">
+												<span>September 2021 – February 2024</span>
+												<span class="duration-dot"></span>
+												<span>2 years 6 months</span>
+												<span class="duration-dot"></span>
+												<span>Kanpur, India</span>
 											</div>
-											<div class="timeline-label">
-												<h2><a href="https://artofexcellence.in/" target="_blank">Web developer
-														for Art of Excellence </a> <span>2015-2016</span></h2>
-												<ul>
-													<li>
-														<p>We developed a website and web application which is based on
-															multi-level marketing chain sysytem.</p>
-													</li>
-												</ul>
+											<p>Research on address entity clustering in Bitcoin and malicious address identification in
+											cryptocurrency. Developing blockchain analytics tools for illicit activity detection.</p>
+										</div>
+									</div>
+
+									<!-- National Blockchain Project -->
+									<div class="timeline-item">
+										<div class="timeline-card">
+											<div class="org-name">National Blockchain Project, IIT Kanpur</div>
+											<div class="role-name">Sr. Student Research Associate</div>
+											<div class="duration">
+												<span>January 2021 – July 2021</span>
+												<span class="duration-dot"></span>
+												<span>7 months</span>
+												<span class="duration-dot"></span>
+												<span>Kanpur, India</span>
 											</div>
 										</div>
-									</article>
+									</div>
+
+									<!-- IIT Kanpur — Masters + TA -->
+									<div class="timeline-item">
+										<div class="timeline-card">
+											<div class="org-name">Indian Institute of Technology, Kanpur</div>
+											<div class="role-name">Masters Student &amp; Teaching Assistant</div>
+											<div class="duration">
+												<span>July 2019 – June 2021</span>
+												<span class="duration-dot"></span>
+												<span>2 years</span>
+												<span class="duration-dot"></span>
+												<span>Kanpur, India</span>
+											</div>
+											<p>Published "Towards Malicious Address Identification in Bitcoin" at IEEE International
+											Conference on Blockchain, Melbourne 2021. Served as Teaching Assistant (Jul 2019 – Jan 2021),
+											assisting faculty with assignments, exams, and student guidance.</p>
+										</div>
+									</div>
+
+									<!-- CUBERSINDIA -->
+									<div class="timeline-item">
+										<div class="timeline-card">
+											<div class="org-name">CUBERSINDIA</div>
+											<div class="role-name">Founder</div>
+											<div class="duration">
+												<span>September 2017 – June 2019</span>
+												<span class="duration-dot"></span>
+												<span>1 year 10 months</span>
+												<span class="duration-dot"></span>
+												<span>Kanpur, India</span>
+											</div>
+											<p>Startup providing software solutions: e-commerce websites, Android applications,
+											administration portals, and ERP systems for clients.</p>
+										</div>
+									</div>
+
+									<!-- Aditya Birla Group -->
+									<div class="timeline-item">
+										<div class="timeline-card">
+											<div class="org-name">Aditya Birla Group (Idea Cellular)</div>
+											<div class="role-name">Software Intern</div>
+											<div class="duration">
+												<span>June 2017 – August 2017</span>
+												<span class="duration-dot"></span>
+												<span>3 months</span>
+												<span class="duration-dot"></span>
+												<span>Noida, India</span>
+											</div>
+											<p>Built JSP (Java Server Pages)-based web applications for employee intra-communication.
+											Developed frontend and backend using Bootstrap templates, JSP, and MySQL. Internal polling
+											and survey portal used by 100–200 employees.</p>
+										</div>
+									</div>
 
 								</div>
 							</div>
 						</div>
 					</div>
 				</section>
-				<!-- ===================================================EDUCATION TAB============================================================================= -->
+
+				<!-- ===== EDUCATION ===== -->
 				<section class="colorlib-education" data-section="education">
 					<div class="colorlib-narrow-content">
 						<div class="row">
-							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
-								data-animate-effect="fadeInLeft">
-								<span class="heading-meta">Education</span>
+							<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+								<span class="heading-meta">Academic Background</span>
 								<h2 class="colorlib-heading animate-box">Education</h2>
 							</div>
 						</div>
-						<div class="row">
-							<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-								<div class="fancy-collapse-panel">
-									<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-										<!-- ============================================================================================= -->
-										<div class="panel panel-default">
-											<div class="panel-heading" role="tab" id="headingOne">
-												<h4 class="panel-title">
-													<a class="collapsed" data-toggle="collapse" data-parent="#accordion"
-														href="#collapseOne" aria-expanded="false"
-														aria-controls="collapseOne">MTech in Computer Science
-													</a>
-												</h4>
-											</div>
-											<div id="collapseOne" class="panel-collapse collapse" role="tabpanel"
-												aria-labelledby="headingOne"
-												style="font-family:Georgia;font-size:medium;">
-												<div class="panel-body">
-													<div class="row">
-														<div class="col-md-6">
-															<p>Completed MTech in computer science from <a
-																	href="https://iitk.ac.in/" target="_blank">IIT
-																	Kanpur</a></p>
-														</div>
-														<div class="col-md-6">
-															<center>
-																<img src="images/graduate-cap.png" height="20%"
-																	width="20%">
-															</center>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<!-- ============================================================================================= -->
-										<div class="panel panel-default">
-											<div class="panel-heading" role="tab" id="headingTwo">
-												<h4 class="panel-title">
-													<a class="collapsed" data-toggle="collapse" data-parent="#accordion"
-														href="#collapseTwo" aria-expanded="false"
-														aria-controls="collapseTwo">BTech of Computer Science
-													</a>
-												</h4>
-											</div>
-											<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
-												aria-labelledby="headingTwo"
-												style="font-family:Georgia;font-size:medium;">
-												<div class="panel-body">
-													<div class="row">
-														<div class="col-md-6">
-															<p>I completed my bachelors in <b>2018</b> from <a
-																	href="http://www.allenhouse.ac.in/"
-																	target="_blank">Allenhouse Group of Colleges,
-																	Kanpur</a>.
+						<div class="row animate-box" data-animate-effect="fadeInLeft">
+							<div class="col-md-12">
 
-															</p>
-														</div>
-														<div class="col-md-6">
-															<center>
-																<img src="images/graduate-cap.png" height="20%"
-																	width="20%">
-															</center>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<!-- ================================================================================================== -->
-
-
-										<div class="panel panel-default">
-											<div class="panel-heading" role="tab" id="headingFour">
-												<h4 class="panel-title">
-													<a class="collapsed" data-toggle="collapse" data-parent="#accordion"
-														href="#collapseFour" aria-expanded="false"
-														aria-controls="collapseFour">Class-XII Education
-													</a>
-												</h4>
-											</div>
-											<div id="collapseFour" class="panel-collapse collapse" role="tabpanel"
-												aria-labelledby="headingFour"
-												style="font-family:Georgia;font-size:medium;">
-												<div class="panel-body">
-													<div class="row">
-														<div class="col-md-6">
-															<p>I completed my class-XII in <b>2014</b> from Saraswati
-																Vidya Mandir Inter College, Kanpur</p>
-															<br>
-														</div>
-														<div class="col-md-6">
-															<center>
-																<img src="images/books-stack-of-three.png" height="20%"
-																	width="20%">
-															</center>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<!-- ====================================================================== -->
-										<div class="panel panel-default">
-											<div class="panel-heading" role="tab" id="headingFive">
-												<h4 class="panel-title">
-													<a class="collapsed" data-toggle="collapse" data-parent="#accordion"
-														href="#collapseFive" aria-expanded="false"
-														aria-controls="collapseFive">Class-X Education
-													</a>
-												</h4>
-											</div>
-											<div id="collapseFive" class="panel-collapse collapse" role="tabpanel"
-												aria-labelledby="headingFive"
-												style="font-family:Georgia;font-size:medium;">
-												<div class="panel-body">
-													<div class="row">
-														<div class="col-md-6">
-															<p>I completed high school in <b>2012</b> from M.V.M inter
-																college, Kanpur.</p>
-															<br>
-														</div>
-														<div class="col-md-6">
-															<center>
-																<img src="images/open-book.png" height="20%"
-																	width="20%">
-															</center>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<!-- ==================================================== -->
+								<div class="edu-card">
+									<div class="edu-icon"><i class="icon-graduation-cap"></i></div>
+									<div class="edu-details">
+										<h4><a href="https://iitk.ac.in/" target="_blank">Indian Institute of Technology, Kanpur</a></h4>
+										<div class="degree">Master of Technology (MTech) &mdash; Computer Science Engineering</div>
+										<div class="year">2019 – 2021 &nbsp;&middot;&nbsp; Thesis: Malicious Address Identification in Bitcoin Blockchain</div>
 									</div>
 								</div>
+
+								<div class="edu-card">
+									<div class="edu-icon"><i class="icon-graduation-cap"></i></div>
+									<div class="edu-details">
+										<h4><a href="https://www.aktu.ac.in/" target="_blank">Dr. A.P.J. Abdul Kalam Technical University</a></h4>
+										<div class="degree">Bachelor of Technology (BTech) &mdash; Computer Science</div>
+										<div class="year">2014 – 2018 &nbsp;&middot;&nbsp; Allenhouse Group of Colleges, Kanpur</div>
+									</div>
+								</div>
+
+								<div class="edu-card">
+									<div class="edu-icon"><i class="icon-book"></i></div>
+									<div class="edu-details">
+										<h4>Saraswati Vidya Mandir Inter College, Kanpur</h4>
+										<div class="degree">Class XII — Intermediate</div>
+										<div class="year">Completed 2014</div>
+									</div>
+								</div>
+
+								<div class="edu-card">
+									<div class="edu-icon"><i class="icon-book"></i></div>
+									<div class="edu-details">
+										<h4>M.V.M. Inter College, Kanpur</h4>
+										<div class="degree">Class X — High School</div>
+										<div class="year">Completed 2012</div>
+									</div>
+								</div>
+
 							</div>
 						</div>
 					</div>
 				</section>
-				<!-- ======================================================SKILL PERCENTAGE================================================================================ -->
 
+				<!-- ===== SKILLS ===== -->
 				<section class="colorlib-skills" data-section="skills">
 					<div class="colorlib-narrow-content">
 						<div class="row">
-							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
-								data-animate-effect="fadeInLeft">
-								<span class="heading-meta">My Specialty</span>
-								<h2 class="colorlib-heading animate-box">Skills</h2>
-							</div>
-						</div>
-						<div class="row">
 							<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-								<p style="font-family:Georgia;font-size:medium;">
-									These are some tools and technologies with which I work and love to make new
-									stuff, still learning some new skills to make stuff more
-									powerful, efficient, and worthy...
-								</p>
-							</div>
-
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-
-								<h3 class="c1">C/C++</h3>
-								<!--
-<div class="progress">
-<div class="progress-bar color-2" role="progressbar" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100" style="width:83%">
-<span>83%</span>
-</div>
-</div>
--->
-							</div>
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-								<h3 class="c1">Python</h3>
-								<!--
-<div class="progress">
-<div class="progress-bar color-3" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">
-<span>85%</span>
-</div>
-</div>
--->
-
-							</div>
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-								<h3 class="c1">Machine learning</h3>
-								<!--
-<div class="progress">
-<div class="progress-bar color-1" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
-<span>80%</span>
-</div>
-</div>
--->
-
-							</div>
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-								<h3 class="c1">Blockchain</h3>
-
-								<!--
-<div class="progress">
-<div class="progress-bar color-6" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">
-<span>85%</span>
-</div>
-</div>
--->
-
-							</div>
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-								<h3 class="c1">PHP</h3>
-
-								<!--
-<div class="progress">
-<div class="progress-bar color-4" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%">
-<span>75%</span>
-</div>
-</div>
--->
-
-							</div>
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-								<h3 class="c1">SQL</h3>
-
-								<!--
-<div class="progress">
-<div class="progress-bar color-5" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="width:78%">
-<span>78%</span>
-</div>
-</div>
--->
-
-							</div>
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-								<h3 class="c1">SEO (Search Engine Optimization)</h3>
-
-								<!--
-<div class="progress">
-<div class="progress-bar color-6" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
-<span>80%</span>
-</div>
-</div>
--->
-
-							</div>
-
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-								<h3 class="c1">HTML & CSS</h3>
-								<!--
-<div class="progress">
-<div class="progress-bar color-5" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
-</div>
-<span class="progress-bar color-5" >80%</span>
-</div>
-</div>
--->
-
-							</div>
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-								<h3 class="c1">Linux Shell script</h3>
-								<!--
-<div class="progress">
-<div class="progress-bar color-4" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%">
-<span>75%</span>
-</div>
-</div>
--->
+								<span class="heading-meta">My Expertise</span>
+								<h2 class="colorlib-heading animate-box">Skills &amp; Technologies</h2>
 							</div>
 						</div>
-						<div class="row">
+						<div class="row animate-box" data-animate-effect="fadeInLeft">
+							<div class="col-md-12">
+								<p class="skills-section-label">Core Expertise</p>
+								<div class="skills-grid">
+									<span class="skill-tag featured">Crypto Forensics</span>
+									<span class="skill-tag featured">Blockchain Security</span>
+									<span class="skill-tag featured">Cybercrime Investigation</span>
+									<span class="skill-tag featured">Intelligence Analysis</span>
+									<span class="skill-tag">Bitcoin Analysis</span>
+									<span class="skill-tag">Address Clustering</span>
+									<span class="skill-tag">Transaction Tracing</span>
+									<span class="skill-tag">Digital Forensics</span>
+								</div>
+
+								<p class="skills-section-label">Programming &amp; Technology</p>
+								<div class="skills-grid">
+									<span class="skill-tag">Python</span>
+									<span class="skill-tag">C / C++</span>
+									<span class="skill-tag">Machine Learning</span>
+									<span class="skill-tag">Graph Analysis</span>
+									<span class="skill-tag">Big Data</span>
+									<span class="skill-tag">SQL / MySQL</span>
+									<span class="skill-tag">PHP</span>
+									<span class="skill-tag">Linux / Shell</span>
+									<span class="skill-tag">HTML &amp; CSS</span>
+									<span class="skill-tag">Docker</span>
+									<span class="skill-tag">JavaScript</span>
+									<span class="skill-tag">Cryptography</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="row" style="margin-top: 3em;">
 							<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
 								<div class="services color-1">
-									<span class="icon2"><i class="icon-bulb"></i></span>
-									<h3>Graphic Design</h3>
+									<span class="icon2"><i class="icon-lock"></i></span>
+									<h3>Crypto Forensics</h3>
 								</div>
 							</div>
 							<div class="col-md-3 animate-box" data-animate-effect="fadeInRight">
 								<div class="services color-2">
-									<span class="icon2"><i class="icon-globe-outline"></i></span>
-									<h3>Web Design</h3>
+									<span class="icon2"><i class="icon-data"></i></span>
+									<h3>Blockchain Analytics</h3>
 								</div>
 							</div>
 							<div class="col-md-3 animate-box" data-animate-effect="fadeInTop">
 								<div class="services color-3">
-									<span class="icon2"><i class="icon-data"></i></span>
-									<h3>Software</h3>
+									<span class="icon2"><i class="icon-bulb"></i></span>
+									<h3>Intelligence Analysis</h3>
 								</div>
 							</div>
 							<div class="col-md-3 animate-box" data-animate-effect="fadeInBottom">
 								<div class="services color-4">
-									<span class="icon2"><i class="icon-phone3"></i></span>
-									<h3>Application</h3>
+									<span class="icon2"><i class="icon-globe-outline"></i></span>
+									<h3>Web Development</h3>
 								</div>
 							</div>
-
-
 						</div>
 					</div>
-
 				</section>
 
-				<!-- =================================================== CONTACT =============================================================== -->
+				<!-- ===== CONTACT ===== -->
 				<section class="colorlib-contact" data-section="contact">
 					<div class="colorlib-narrow-content">
 						<div class="row">
-							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
-								data-animate-effect="fadeInLeft">
+							<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
 								<span class="heading-meta">Get in Touch</span>
 								<h2 class="colorlib-heading">Contact</h2>
 							</div>
 						</div>
-						<div class="row">
-							<div class="col-md-7">
-								<div class="colorlib-feature colorlib-feature-sm animate-box"
-									data-animate-effect="fadeInLeft">
-									<div class="colorlib-icon">
-										<i class="icon-globe-outline"></i>
+						<div class="row animate-box" data-animate-effect="fadeInLeft">
+							<div class="col-md-8">
+								<div class="contact-card">
+									<div class="colorlib-feature colorlib-feature-sm">
+										<div class="colorlib-icon">
+											<i class="icon-mail2"></i>
+										</div>
+										<div class="colorlib-text">
+											<h3>Email</h3>
+											<p>
+												<a href="mailto:deepeshchaudhari0786@gmail.com">deepeshchaudhari0786@gmail.com</a><br>
+												<a href="mailto:contact@blockstash.in">contact@blockstash.in</a>
+											</p>
+										</div>
 									</div>
-									<div class="colorlib-text">
-										<p><span>deepeshc@iitk.ac.in | deepeshc@cse.iitk.ac.in | contact@blockstash.in</span></p>
+									<div class="colorlib-feature colorlib-feature-sm">
+										<div class="colorlib-icon">
+											<i class="icon-globe-outline"></i>
+										</div>
+										<div class="colorlib-text">
+											<h3>Online</h3>
+											<p>
+												<a href="https://www.linkedin.com/in/amideepesh" target="_blank">linkedin.com/in/amideepesh</a><br>
+												<a href="https://blockstash.in" target="_blank">blockstash.in</a>
+											</p>
+										</div>
+									</div>
+									<div class="colorlib-feature colorlib-feature-sm">
+										<div class="colorlib-icon">
+											<i class="icon-map"></i>
+										</div>
+										<div class="colorlib-text">
+											<h3>Location</h3>
+											<p>C3iHub, IIT Kanpur, Uttar Pradesh &mdash; 208016, India</p>
+										</div>
 									</div>
 								</div>
-								<div class="colorlib-feature colorlib-feature-sm animate-box"
-									data-animate-effect="fadeInLeft">
-									<div class="colorlib-icon">
-										<i class="icon-map"></i>
-									</div>
-									<div class="colorlib-text">
-										<p>Room no 406, Technopark Building, IIT-Kanpur 208016 </p>
-									</div>
-								</div>
-
 							</div>
 						</div>
 					</div>
 				</section>
-				<!-- ===================================================================== -->
+
+				<!-- ===== FOOTER CTA ===== -->
 				<section>
-					<div class="row">
-						<div class="col-md-12 animate-box">
-							<p><a href="" class="btn btn-primary btn-lg btn-load-more">Thanks for Visiting here!!! <i
-										class="icon-heart"></i></a></p>
-						</div>
-						<p>
-							<center>
-								<a href="https://www.linkedin.com/in/deepesh-chaudhari-77bb19130" target="_blank"><img
-										src="images/linkedin-sign.png" width="5%" height="5%"></a>
-							</center>
-
-
-
-						</p>
-
+					<div class="footer-cta">
+						<h3>Let's Work Together</h3>
+						<p>Interested in blockchain security, crypto forensics, or collaboration? Reach out!</p>
+						<a href="https://www.linkedin.com/in/amideepesh" target="_blank" class="btn btn-primary">
+							Connect on LinkedIn &nbsp;<i class="icon-linkedin2"></i>
+						</a>
+						<a href="mailto:deepeshchaudhari0786@gmail.com" class="btn btn-outline-light">
+							Send Email &nbsp;<i class="icon-mail2"></i>
+						</a>
 					</div>
 				</section>
-				<!-- =============================================END OF PAGE==================================================================== -->
+
 			</div>
 		</div>
 	</div>
 
 	<script data-cfasync="false" src="js/email-decode.min.js"></script>
-	<script src="js/jquery.min.js" type="287b0f634a4fccf9c9a8fc32-text/javascript"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.flexslider-min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.countTo.js"></script>
+	<script src="js/main.js"></script>
 
-	<script src="js/jquery.easing.1.3.js" type="287b0f634a4fccf9c9a8fc32-text/javascript"></script>
-
-	<script src="js/bootstrap.min.js" type="287b0f634a4fccf9c9a8fc32-text/javascript"></script>
-
-	<script src="js/jquery.waypoints.min.js" type="287b0f634a4fccf9c9a8fc32-text/javascript"></script>
-
-	<script src="js/jquery.flexslider-min.js" type="287b0f634a4fccf9c9a8fc32-text/javascript"></script>
-
-	<script src="js/owl.carousel.min.js" type="287b0f634a4fccf9c9a8fc32-text/javascript"></script>
-
-	<script src="js/jquery.countTo.js" type="287b0f634a4fccf9c9a8fc32-text/javascript"></script>
-
-	<script src="js/main.js" type="287b0f634a4fccf9c9a8fc32-text/javascript"></script>
-
-	<script type="287b0f634a4fccf9c9a8fc32-text/javascript">
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-23581568-13');
-</script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-23581568-13');
+	</script>
 	<script src="js/rocket-loader.min.js" data-cf-settings="287b0f634a4fccf9c9a8fc32-|49" defer=""></script>
 </body>
 
