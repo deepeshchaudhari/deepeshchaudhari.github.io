@@ -31,15 +31,15 @@
 	<style>
 		/* ===== DESIGN TOKENS ===== */
 		:root {
-			--primary: #6c63ff;
-			--primary-dark: #5a52d5;
-			--accent: #00d4aa;
-			--dark: #0f0f23;
-			--sidebar-bg: #13131f;
-			--text-dark: #1a1a2e;
-			--text-muted: #8892b0;
-			--border: #e8edf5;
-			--section-alt: #f8f9ff;
+			--primary: #1d4ed8;
+			--primary-dark: #1e40af;
+			--accent: #60a5fa;
+			--dark: #0a192f;
+			--sidebar-bg: #0a192f;
+			--text-dark: #111827;
+			--text-muted: #6b7280;
+			--border: #e5e7eb;
+			--section-alt: #f9fafb;
 		}
 
 		/* ===== BASE ===== */
@@ -49,7 +49,7 @@
 			font-size: 15px;
 			line-height: 1.8;
 			color: #444;
-			background: #f8f9ff;
+			background: #f9fafb;
 		}
 
 		h1, h2, h3, h4, h5, h6 {
@@ -72,12 +72,12 @@
 			width: 115px;
 			height: 115px;
 			border: 3px solid var(--primary);
-			box-shadow: 0 0 0 7px rgba(108, 99, 255, 0.12);
+			box-shadow: 0 0 0 7px rgba(29, 78, 216, 0.1);
 			transition: box-shadow 0.3s;
 		}
 
 		#colorlib-aside .author-img:hover {
-			box-shadow: 0 0 0 7px rgba(108, 99, 255, 0.28);
+			box-shadow: 0 0 0 7px rgba(29, 78, 216, 0.22);
 		}
 
 		#colorlib-aside #colorlib-logo a {
@@ -145,11 +145,11 @@
 		.sidebar-social a:hover {
 			color: #fff;
 			border-color: var(--accent);
-			background: rgba(0, 212, 170, 0.12);
+			background: rgba(96, 165, 250, 0.12);
 		}
 
 		/* ===== MAIN ===== */
-		#colorlib-main { background: #f8f9ff; }
+		#colorlib-main { background: #f9fafb; }
 
 		.colorlib-about,
 		.colorlib-experience,
@@ -196,7 +196,7 @@
 
 		/* ===== HERO ===== */
 		.about-hero {
-			background: linear-gradient(135deg, var(--dark) 0%, #1b1b3a 100%);
+			background: linear-gradient(135deg, var(--dark) 0%, #0d2748 100%);
 			color: white;
 			padding: 3.5em 2.5em;
 			border-radius: 14px;
@@ -211,7 +211,7 @@
 			right: -5%;
 			width: 350px;
 			height: 350px;
-			background: radial-gradient(circle, rgba(108, 99, 255, 0.18) 0%, transparent 70%);
+			background: radial-gradient(circle, rgba(29, 78, 216, 0.15) 0%, transparent 70%);
 			pointer-events: none;
 		}
 
@@ -222,7 +222,7 @@
 			left: 15%;
 			width: 250px;
 			height: 250px;
-			background: radial-gradient(circle, rgba(0, 212, 170, 0.1) 0%, transparent 70%);
+			background: radial-gradient(circle, rgba(96, 165, 250, 0.1) 0%, transparent 70%);
 			pointer-events: none;
 		}
 
@@ -261,9 +261,9 @@
 		}
 
 		.hero-badge {
-			background: rgba(108, 99, 255, 0.18);
+			background: rgba(29, 78, 216, 0.15);
 			color: rgba(255, 255, 255, 0.9);
-			border: 1px solid rgba(108, 99, 255, 0.35);
+			border: 1px solid rgba(29, 78, 216, 0.28);
 			padding: 5px 14px;
 			border-radius: 20px;
 			font-size: 12px;
@@ -283,7 +283,7 @@
 		}
 
 		.publication-card:hover {
-			box-shadow: 0 8px 28px rgba(108, 99, 255, 0.11);
+			box-shadow: 0 8px 28px rgba(29, 78, 216, 0.09);
 			transform: translateY(-2px);
 		}
 
@@ -305,7 +305,7 @@
 		}
 
 		.badge-year {
-			background: rgba(108, 99, 255, 0.1);
+			background: rgba(29, 78, 216, 0.08);
 			color: var(--primary);
 			padding: 2px 10px;
 			border-radius: 10px;
@@ -364,12 +364,12 @@
 			border-radius: 50%;
 			background: var(--primary);
 			border: 2px solid #ffffff;
-			box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+			box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.16);
 		}
 
 		.timeline-item.current::before {
 			background: var(--accent);
-			box-shadow: 0 0 0 3px rgba(0, 212, 170, 0.22);
+			box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
 		}
 
 		.timeline-card {
@@ -382,8 +382,8 @@
 		}
 
 		.timeline-card:hover {
-			box-shadow: 0 6px 24px rgba(108, 99, 255, 0.1);
-			border-color: rgba(108, 99, 255, 0.18);
+			box-shadow: 0 6px 24px rgba(29, 78, 216, 0.08);
+			border-color: rgba(29, 78, 216, 0.15);
 		}
 
 		.timeline-card .org-name {
@@ -427,9 +427,9 @@
 
 		.current-badge {
 			display: inline-block;
-			background: rgba(0, 212, 170, 0.1);
-			color: #00b894;
-			border: 1px solid rgba(0, 212, 170, 0.3);
+			background: rgba(96, 165, 250, 0.1);
+			color: #1d63c7;
+			border: 1px solid rgba(96, 165, 250, 0.3);
 			padding: 2px 9px;
 			border-radius: 10px;
 			font-size: 10.5px;
@@ -454,7 +454,7 @@
 		}
 
 		.edu-card:hover {
-			box-shadow: 0 6px 22px rgba(108, 99, 255, 0.1);
+			box-shadow: 0 6px 22px rgba(29, 78, 216, 0.08);
 			transform: translateY(-2px);
 		}
 
@@ -516,14 +516,14 @@
 			color: #fff;
 			border-color: var(--primary);
 			transform: translateY(-2px);
-			box-shadow: 0 4px 14px rgba(108, 99, 255, 0.22);
+			box-shadow: 0 4px 14px rgba(29, 78, 216, 0.18);
 		}
 
 		.skill-tag.featured {
 			background: linear-gradient(135deg, var(--primary), var(--primary-dark));
 			color: #fff;
 			border-color: transparent;
-			box-shadow: 0 3px 12px rgba(108, 99, 255, 0.25);
+			box-shadow: 0 3px 12px rgba(29, 78, 216, 0.2);
 		}
 
 		.skill-tag.featured:hover {
@@ -552,7 +552,7 @@
 
 		.services:hover {
 			transform: translateY(-4px);
-			box-shadow: 0 10px 30px rgba(108, 99, 255, 0.12) !important;
+			box-shadow: 0 10px 30px rgba(29, 78, 216, 0.1) !important;
 		}
 
 		/* ===== PANELS / PROJECTS ===== */
@@ -572,7 +572,7 @@
 
 		.panel-heading a.collapsed:hover {
 			background: #f2f0ff !important;
-			border-color: rgba(108, 99, 255, 0.25) !important;
+			border-color: rgba(29, 78, 216, 0.2) !important;
 		}
 
 		.panel-body {
@@ -593,7 +593,7 @@
 		}
 
 		.colorlib-feature .colorlib-icon {
-			background: linear-gradient(135deg, rgba(108, 99, 255, 0.08), rgba(0, 212, 170, 0.08)) !important;
+			background: linear-gradient(135deg, rgba(29, 78, 216, 0.06), rgba(96, 165, 250, 0.06)) !important;
 			border-radius: 12px !important;
 		}
 
@@ -611,7 +611,7 @@
 
 		/* ===== FOOTER CTA ===== */
 		.footer-cta {
-			background: linear-gradient(135deg, var(--dark) 0%, #1b1b3a 100%);
+			background: linear-gradient(135deg, var(--dark) 0%, #0d2748 100%);
 			padding: 4em 2.5em;
 			text-align: center;
 		}
